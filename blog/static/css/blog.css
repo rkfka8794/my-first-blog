@@ -44,3 +44,51 @@ h1, h2, h3, h4 {
 .post h1 a, .post h1 a:visited {
     color: #000000;
 }
+/*
+.fakeimg {
+      height: 200px;
+      background: #aaa;
+  }
+	.carousel-inner img {
+      width: 800px;
+      height: 400px;
+  }
+	.carousel-inner2 img {
+      width: 800px;
+      height: 400px;
+
+  }
+#grid{
+	display:grid;
+	grid-template-columns: 1fr 200px;
+}
+#grid2{
+  display:grid;
+  grid-template-rows: 70px 1fr;
+
+}
+#grid3
+{
+  display:grid;
+  grid-template-columns: 200px 800px 300px;
+}
+.form-group
+{
+  margin:5px;
+}
+
+h1{
+	font-size:50px; font-weight:border;padding:20px; height:100px; margin-bottom:0px;
+	  }
+.layout-footer {  width:1000px; height:176px;background-color: #EAEAEA;}
+.layout-footer .utilMenu { overflow:hidden; height:42px; border-bottom:1px solid #e8e8e8; line-height:43px; *zoom:1; }
+.layout-footer .utilMenu li {  padding:0 10px 0 10px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_bar2.gif") no-repeat 0 15px; }
+.layout-footer .utilMenu li.home { padding-left:0; background:none; }
+.layout-footer .utilMenu li a { color:#2e2e2e; background:url("//img.echosting.cafe24.com/skin/base/common/ico_bar2.gif") no-repeat 0 5px;}
+.layout-footer .address { padding:13px 0 0; color:#757575; line-height:18px; }
+.layout-footer .address span { padding:0 25px 0 0; }
+.layout-footer .address span a { color:#757575; }
+.layout-footer .copyright { position:absolute; left:204px; bottom:0; height:32px; color:#ededed; font-size:11px; line-height:32px; }
+.layout-footer .pageTop { position:absolute; right:0; top:10px; }
+.layout-footer .hosting { position:absolute; right:0; top:77px; }
+*/

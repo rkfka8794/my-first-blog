@@ -3,8 +3,11 @@
 
   <!-- 로그인 되어있는 경우 -->
   {% if user.is_active %}
+  <p></p>
   <h2> Welcome, {{user.username}} </h2>
+  <p></p>
   <a href="{% url 'logout' %}">로그아웃</a>
+  <p></p>
 
   <!-- 로그인 되어있지 않은 경우 -->
   {% else %}
@@ -13,10 +16,12 @@
   <p>ID나 비밀번호가 일치하지 않습니다.</p>
   {% endif %}
     <!-- 로그인 폼 -->
+  <p></p>
   <form method="post" action="{% url 'login' %}">
   {% csrf_token %}
   <input type="hidden" name="next" value="" />
   {{ form.as_p }}
+    <p></p>
   <button type="submit">로그인</button>
       <br>
         <p>아이디가 없으신가요? <a href="{% url 'signup'%}">회원가입</a></p>

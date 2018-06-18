@@ -12,7 +12,7 @@ class PostForm(forms.ModelForm):
 
 class CreateUserForm(UserCreationForm): # 내장 회원가입 폼을 상속받아서 확장한다.
     email = forms.EmailField(required=True) # 이메일 필드 추가
-
+    
     class Meta:
         model = User
         fields = ("username", "email", "password1", "password2")
