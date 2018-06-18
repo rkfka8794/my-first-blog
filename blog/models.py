@@ -19,4 +19,6 @@ class Post(models.Model):
         return self.title
 
 
+
+
 # Create your models here.

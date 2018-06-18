@@ -53,4 +53,37 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+def ex_info(request):
+    return render(request, 'site/ex_info.html', {})
+
+def painting(request):
+    return render(request, 'site/painting.html', {})
+
+def design(request):
+    return render(request, 'site/design.html', {})
+
+def etc(request):
+
+    return render(request, 'site/etc.html', {})
+
+def engraving(request):
+    return render(request, 'site/engraving.html', {})
+
+def mypage(request):
+    return render(request, 'site/mypage.html', {})
+
+
+def crafts(request):
+    return render(request, 'site/crafts.html', {})
+
+def art_piece(request):
+    return render(request, 'site/art_piece.html', {})
+
+def picture(request):
+    return render(request, 'site/picture.html', {})
+
+def home(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'site/home.html', {'posts': posts})
 # Create your views here.

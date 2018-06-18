@@ -1,0 +1,86 @@
+
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<!--    <div  id="grid3" style="margin-top:10px; margin-left:10px;">
+nav {
+  border-right:1px solid gray;
+  width:200px;
+  height:600px;
+  float:left;
+}
+-->
+
+<div id="demo" class="carousel slide" data-ride="carousel" style=" margin:10px; width:800px;">
+<ul class="carousel-indicators">
+<li data-target="#demo" data-slide-to="0" class="active"></li>
+<li data-target="#demo" data-slide-to="1"></li>
+<li data-target="#demo" data-slide-to="2"></li>
+</ul>
+<div class="carousel-inner">
+<div class="carousel-item active">
+  <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/14595612_1756911651235504_7555423354571306654_n.jpg?_nc_cat=0&_nc_eui2=AeFAG4GzzaRHEKTNqjxhMPFnT6YtK_tbLctaoSKcbsgLTMBg29ydNmy859FVSZl8pPRWtagvyMZFYuIxDorhVNVfwO9c7tMas7IiVyu7Z9wiCw&oh=ea1ea9efab7679d251f87d17c43c153d&oe=5B8C2669" alt="" width="1200" height="500">
+  <div class="carousel-caption">
+    <h3></h3>
+    <p></p>
+  </div>
+</div>
+<div class="carousel-item">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCMaoJNhB8DI3yiJiRZJtc3nrx_ZgP9AwilWdQMocxwHOcOumo7A" alt="Chicago" width="1200" height="500">
+  <div class="carousel-caption">
+    <h3></h3>
+    <p></p>
+  </div>
+</div>
+<div class="carousel-item">
+  <img src="https://github.com/hongiksidi-dev/2015/blob/gh-pages/img/Pablo%20Fuentes%20Gomez_EX-_01.jpg?raw=true" alt="New York" width="1100" height="500">
+  <div class="carousel-caption">
+    <h3></h3>
+    <p></p>
+  </div>
+</div>
+</div>
+<a class="carousel-control-prev" href="#demo" data-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</a>
+<a class="carousel-control-next" href="#demo" data-slide="next">
+<span class="carousel-control-next-icon"></span>
+</a>
+</div>
+
+   <nav id="catanav" style=" float:left; border-right:black 2px solid; margin:10px">
+      <h3 id="catagory" style="border-bottom:gray 1px solid; padding:10px;">카테고리</h3>
+      <p></p>
+      <ul  class="nav nav-pills flex-column">
+         <li class="nav-item">
+            <a class="nav-link" href="#">새로 등록된 작품</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">Hot한 상품</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">자유 게시판</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link" href="#">메뉴얼</a>
+         </li>
+      </ul>
+  </nav>
+
+<!--  <article id ="article" style="float:left;">-->
+    <div class="carousel-inner"style=" margin:10px; width:200px; height:240px; float:left;">
+      <img src="https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/14595612_1756911651235504_7555423354571306654_n.jpg?_nc_cat=0&_nc_eui2=AeFAG4GzzaRHEKTNqjxhMPFnT6YtK_tbLctaoSKcbsgLTMBg29ydNmy859FVSZl8pPRWtagvyMZFYuIxDorhVNVfwO9c7tMas7IiVyu7Z9wiCw&oh=ea1ea9efab7679d251f87d17c43c153d&oe=5B8C2669" alt="Chica">
+      </div>
+    <div class="carousel-inner"style="margin:10px; width:200px; height:240px; float:left;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCMaoJNhB8DI3yiJiRZJtc3nrx_ZgP9AwilWdQMocxwHOcOumo7A" alt="Chicago" >
+    </div>
+    <div class="carousel-inner" style="margin:20px; width:200px; height:240px;">
+      <img src="https://github.com/hongiksidi-dev/2015/blob/gh-pages/img/Pablo%20Fuentes%20Gomez_EX-_01.jpg?raw=true" alt="NewYork">
+    </div>
+<!--    </div>-->
+
+
+
+
+<!--</div>-->
+{% endblock %}

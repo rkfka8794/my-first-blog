@@ -42,10 +42,10 @@
 }
 
 h1{
-	font-size:50px; font-weight:border;padding:20px; height:100px; margin-bottom:0px;
-	  }
-.layout-footer {  width:1000px; height:176px;background-color: #EAEAEA;}
-.layout-footer .utilMenu { overflow:hidden; height:42px; border-bottom:1px solid #e8e8e8; line-height:43px; *zoom:1; }
+   font-size:50px; font-weight:border;padding:20px; height:100px; margin-bottom:0px;
+     }
+.layout-footer { position: absolute; bottom: 0; width:100%; height:150px;background-color: #EAEAEA;}
+.layout-footer .utilMenu { overflow:hidden; height:30px; border-bottom:1px solid #e8e8e8; line-height:43px; *zoom:1; }
 .layout-footer .utilMenu li {  padding:0 10px 0 10px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_bar2.gif") no-repeat 0 15px; }
 .layout-footer .utilMenu li.home { padding-left:0; background:none; }
 .layout-footer .utilMenu li a { color:#2e2e2e; background:url("//img.echosting.cafe24.com/skin/base/common/ico_bar2.gif") no-repeat 0 5px;}
@@ -55,9 +55,61 @@ h1{
 .layout-footer .copyright { position:absolute; left:204px; bottom:0; height:32px; color:#ededed; font-size:11px; line-height:32px; }
 .layout-footer .pageTop { position:absolute; right:0; top:10px; }
 .layout-footer .hosting { position:absolute; right:0; top:77px; }
+
  a:link { color: black; text-decoration: none;}
  a:visited { color: black; text-decoration: none;}
  a:hover { color: black; text-decoration: none;}
+
+ buttons {
+
+    width:90px;
+
+    background-color: #424242;
+
+    border: none;
+
+    color:#fff;
+
+    padding: 8px 0;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    font-size: 13px;
+
+    margin: 4px;
+
+    cursor: pointer;
+
+}
+buttonss {
+
+    width:80px;
+
+    background-color: #424242;
+
+    border: none;
+
+    color:#fff;
+
+    padding: 3px 0;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    font-size: 13px;
+
+    margin: 4px;
+
+    cursor: pointer;
+
+}
 
   </style>
 </head>
@@ -67,17 +119,17 @@ h1{
 	<div>
 		<h1><a href="/">HI ART</a></h1>
 	</div>
-	<div>
-		<ul class="nav navbar-nav navbar-right">
+	   <div>
+      <ul class="nav navbar-nav navbar-right">
             {% if user.is_active %}
-            <p><li><a href="{%url 'login' %}"> <span class="glyphicon glyphicon-heart"></span> {{user.username}}</a></li></p>
-            <li><a href="{% url 'logout' %}">Logout</a></li>
+            <li><a href="{%url 'mypage' %}"> <span class="glyphicon glyphicon-heart"></span> ID: {{user.username}}</a> <buttonss onclick="location.href='{% url 'logout' %}' ">Logout</buttonss></li>
+
             {% else %}
-            <p><li><a href="{%url 'login' %}"> <span class="glyphicon glyphicon-user"></span> Login</a></li></p>
-            <!--<li><a href="{% url 'admin:index' %}">Admin</a></li>-->
+            <buttons  onclick="location.href='{% url 'login' %}' " >로그인</buttons>
+          <!--  <li><a href="{% url 'admin:index' %}">Admin</a></li>-->
             {% endif %}
         </ul>
-	</div>
+   </div>
 </div>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <a class="navbar-brand" href="/">HOME</a>
@@ -87,28 +139,28 @@ h1{
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#">전시정보　</a>
+        <a class="nav-link" href="{% url 'ex_info' %}">전시정보　</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">회화　</a>
+        <a class="nav-link" href="{% url 'painting' %}">회화　</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">공예　</a>
+        <a class="nav-link" href="{% url 'crafts' %}">공예　</a>
       </li>
-			<li class="nav-item">
-        <a class="nav-link" href="#">디자인　</a>
+         <li class="nav-item">
+        <a class="nav-link" href="{% url 'design' %}">디자인　</a>
       </li>
-			<li class="nav-item">
-        <a class="nav-link" href="#">아트상품　</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">사진　</a>
+         <li class="nav-item">
+        <a class="nav-link" href="{% url 'art_piece' %}">아트상품　</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">판화　</a>
+        <a class="nav-link" href="{% url 'picture' %}">사진　</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">기타　</a>
+        <a class="nav-link" href="{% url 'engraving' %}">판화　</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'etc' %}">기타　</a>
       </li>
     </ul>
   </div>
@@ -121,22 +173,21 @@ h1{
 <div class="layout-footer">
             <!--@css(/css/module/layout/footer.css)-->
             <ul class="utilMenu">
-                <li class="home"><a href="#">　홈　</a>
-                <a href="#">　회사소개　</a>
-                <a href="#">　이용약관　</a>
-                <a href="#">　개인정보처리방침　</a>
-                <a href="#">　이용안내　</a></li>
+                <li class="home"><a href="">　홈　</a>
+                <a href="{% url 'etc' %}">　회사소개　</a>
+                <a href="{% url 'etc' %}">　이용약관　</a>
+                <a href="{% url 'etc' %}">　개인정보처리방침　</a>
+                <a href="{% url 'etc' %}">　이용안내　</a></li>
             </ul>
             <p class="address">
-                <span>법인명(상호) :  </span> <span>대표자(성명) :</span> <span>사업자 등록번호 안내 : </span> <span>통신판매업 신고</span> <span></span> <br />
-                <span>전화: </span> <span>팩스 :</span> <span>주소 : </span><br />
-                <span>개인정보보호책임자 : <a href="#"></a></span><br />
-                <span>Contact <strong><a href="#">email</a></strong> for more information.</span>
+                <span>법인명(상호) : HIART  </span> <span> 대표자 : 전진 </span> <br />
+                <span>전화: 010-6436-6544 </span> <span>팩스 : 010-6436-6544 </span> <span>주소 : 경기도 남양주시 도농동 롯데아파트</span><br />
+                <span>개인정보보호책임자 : 김정환 <a href=""></a></span><br />
+                <span>Contact <strong><a href="">glglwjswls3@naver.com </a></strong> for more information.</span>
             </p>
             <p class="copyright">Copyright &copy; 2011 <strong>{$mall_name}</strong>. All rights reserved.</p>
             <p class="pageTop"><a href="#"화면 최상단으로 이동하기></a></p>
 
 </div>
-
 </body>
-</html>;dgdlkg
+</html>
